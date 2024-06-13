@@ -1,0 +1,1398 @@
+Started GET "/" for 127.0.0.1 at 2024-05-07 10:29:36 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 509)
+  Rendered layout layouts/application.html.erb (Duration: 661.0ms | Allocations: 107782)
+Completed 200 OK in 673ms (Views: 665.5ms | ActiveRecord: 0.0ms | Allocations: 112135)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 10:29:49 -0400
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: www.example.com
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 10:37:26 -0400
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+(irb):1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2024-05-07 10:39:47 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 74.3ms | Allocations: 23344)
+Completed 200 OK in 80ms (Views: 76.1ms | ActiveRecord: 0.0ms | Allocations: 26091)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 10:39:57 -0400
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 10:49:34 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"John Doe", "phone_number"=>"1234567890"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 673)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+(irb):2:in `<main>'
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 10:51:37 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"John Doe", "phone_number"=>"1234567890"}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1568)
+
+
+  
+NameError (uninitialized constant Api::V1::GuestsController::Guest):
+  
+app/controllers/api/v1/guests_controller.rb:9:in `create'
+(irb):1:in `<main>'
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGuests (20240507145433)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "guests" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "full_name" varchar, "phone_number" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240507145433"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-05-07 14:54:42.286939"], ["updated_at", "2024-05-07 14:54:42.286939"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 10:54:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"John Doe", "phone_number"=>"1234567890"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGuest Create (0.6ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "John Doe"], ["phone_number", "1234567890"], ["created_at", "2024-05-07 14:54:55.101079"], ["updated_at", "2024-05-07 14:54:55.101079"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 11ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 7214)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 10:55:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 70.1ms | Allocations: 23326)
+Completed 200 OK in 76ms (Views: 72.0ms | ActiveRecord: 0.0ms | Allocations: 26073)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 10:56:03 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"fullName"=>"william c", "phoneNumber"=>"4083346135", "guest"=>{}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.5ms | Allocations: 264)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 10:59:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 525.3ms | Allocations: 58433)
+Completed 200 OK in 531ms (Views: 527.4ms | ActiveRecord: 0.0ms | Allocations: 61179)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 10:59:28 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:10:in `create'
+  [1m[36mGuest Create (0.7ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "w c"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 14:59:28.826552"], ["updated_at", "2024-05-07 14:59:28.826552"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:10:in `create'
+Completed 201 Created in 11ms (Views: 0.6ms | ActiveRecord: 1.6ms | Allocations: 7098)
+
+
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+Started GET "/" for 127.0.0.1 at 2024-05-07 11:05:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 22499)
+Completed 200 OK in 57ms (Views: 53.3ms | ActiveRecord: 0.0ms | Allocations: 25246)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 11:07:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 77.4ms | Allocations: 23433)
+Completed 200 OK in 83ms (Views: 79.2ms | ActiveRecord: 0.0ms | Allocations: 26180)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 11:07:36 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mGuest Create (1.0ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "w c"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 15:07:36.871180"], ["updated_at", "2024-05-07 15:07:36.871180"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+Completed 201 Created in 14ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 7095)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 11:07:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 71.4ms | Allocations: 23443)
+Completed 200 OK in 77ms (Views: 73.3ms | ActiveRecord: 0.0ms | Allocations: 26190)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 11:08:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 559.4ms | Allocations: 58642)
+Completed 200 OK in 565ms (Views: 561.1ms | ActiveRecord: 0.0ms | Allocations: 61388)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 11:09:00 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w", "phone_number"=>"a"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 263)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 11:11:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 66.4ms | Allocations: 23536)
+Completed 200 OK in 71ms (Views: 68.0ms | ActiveRecord: 0.0ms | Allocations: 26283)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 11:11:58 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mGuest Create (0.8ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "w c"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 15:11:58.522438"], ["updated_at", "2024-05-07 15:11:58.522438"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+Completed 201 Created in 13ms (Views: 0.4ms | ActiveRecord: 2.3ms | Allocations: 7103)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 11:23:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 82.9ms | Allocations: 28545)
+Completed 200 OK in 89ms (Views: 85.4ms | ActiveRecord: 0.0ms | Allocations: 31291)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 11:26:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 525.9ms | Allocations: 60787)
+Completed 200 OK in 532ms (Views: 527.9ms | ActiveRecord: 0.0ms | Allocations: 63533)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 11:32:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 73.1ms | Allocations: 23693)
+Completed 200 OK in 79ms (Views: 75.1ms | ActiveRecord: 0.0ms | Allocations: 26440)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 11:32:16 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 20ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7502)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 11:32:32 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w a", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1093)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 11:32:38 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w a", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 0ms (Allocations: 506)
+
+
+  
+NameError (uninitialized constant Api::V1::GuestsController::Guest):
+  
+app/controllers/api/v1/guests_controller.rb:7:in `create'
+Started GET "/" for 127.0.0.1 at 2024-05-07 11:32:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 66.0ms | Allocations: 23731)
+Completed 200 OK in 72ms (Views: 68.2ms | ActiveRecord: 0.0ms | Allocations: 26478)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 11:33:01 -0400
+  
+SyntaxError (/Users/willcuh4856/Downloads/mealpal-code-exercise-master 6/app/models/guest.rb:2: syntax error, unexpected end-of-input):
+  
+app/models/guest.rb:2: syntax error, unexpected end-of-input
+app/models/guest.rb:2: syntax error, unexpected end-of-input
+app/models/guest.rb:2: syntax error, unexpected end-of-input
+Started GET "/" for 127.0.0.1 at 2024-05-07 11:33:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 72.4ms | Allocations: 23729)
+Completed 200 OK in 79ms (Views: 75.6ms | ActiveRecord: 0.0ms | Allocations: 26476)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 11:33:31 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"a d", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mGuest Create (0.8ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "a d"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 15:33:31.261474"], ["updated_at", "2024-05-07 15:33:31.261474"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+Completed 201 Created in 18ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 7099)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 11:34:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 71.6ms | Allocations: 23739)
+Completed 200 OK in 76ms (Views: 73.4ms | ActiveRecord: 0.0ms | Allocations: 26486)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 11:34:31 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"wa ca", "phone_number"=>"40833333333"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mGuest Create (0.7ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "wa ca"], ["phone_number", "40833333333"], ["created_at", "2024-05-07 15:34:31.512561"], ["updated_at", "2024-05-07 15:34:31.512561"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+Completed 201 Created in 14ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 7203)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 11:34:41 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"wa c", "phone_number"=>"4083333312"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 9ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2056)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 11:35:00 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"wa ca", "phone_number"=>"4083333312"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mGuest Create (0.6ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "wa ca"], ["phone_number", "4083333312"], ["created_at", "2024-05-07 15:35:00.319722"], ["updated_at", "2024-05-07 15:35:00.319722"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+Completed 201 Created in 7ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 1977)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 11:46:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 533.7ms | Allocations: 59108)
+Completed 200 OK in 539ms (Views: 535.9ms | ActiveRecord: 0.0ms | Allocations: 61854)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 11:46:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 75.9ms | Allocations: 23838)
+Completed 200 OK in 81ms (Views: 77.5ms | ActiveRecord: 0.0ms | Allocations: 26585)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 11:47:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 517.3ms | Allocations: 59167)
+Completed 200 OK in 523ms (Views: 519.3ms | ActiveRecord: 0.0ms | Allocations: 61913)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 11:47:50 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"wa ca", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mGuest Create (0.7ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "wa ca"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 15:47:50.258391"], ["updated_at", "2024-05-07 15:47:50.258391"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+Completed 201 Created in 14ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 7203)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 11:48:04 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"wa c", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 8ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2056)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 12:07:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.7ms | Allocations: 378)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 2015)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 12:07:42 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.2ms | Allocations: 46)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 227)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 12:07:43 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.3ms | Allocations: 45)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 219)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 12:08:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.7ms | Allocations: 378)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 2015)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 12:08:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+Zeitwerk::NameError (expected file /Users/willcuh4856/Downloads/mealpal-code-exercise-master 6/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/welcome_controller.rb:3:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 12:08:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 75.9ms | Allocations: 27058)
+Completed 200 OK in 81ms (Views: 77.7ms | ActiveRecord: 0.0ms | Allocations: 29804)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 12:08:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 67.3ms | Allocations: 23936)
+Completed 200 OK in 72ms (Views: 69.1ms | ActiveRecord: 0.0ms | Allocations: 26683)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 12:09:10 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"fullName"=>"william cui", "phoneNumber"=>"4083347134", "guest"=>{}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.7ms | Allocations: 600)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: guest):
+  
+app/controllers/api/v1/guests_controller.rb:18:in `guest_params'
+app/controllers/api/v1/guests_controller.rb:7:in `create'
+Started GET "/" for 127.0.0.1 at 2024-05-07 12:09:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 76.3ms | Allocations: 23950)
+Completed 200 OK in 81ms (Views: 78.0ms | ActiveRecord: 0.0ms | Allocations: 26697)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 12:10:04 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"fullName"=>"w c", "phoneNumber"=>"4083346135", "guest"=>{}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.7ms | Allocations: 600)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: guest):
+  
+app/controllers/api/v1/guests_controller.rb:18:in `guest_params'
+app/controllers/api/v1/guests_controller.rb:7:in `create'
+Started GET "/" for 127.0.0.1 at 2024-05-07 12:11:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 69.1ms | Allocations: 23946)
+Completed 200 OK in 74ms (Views: 70.8ms | ActiveRecord: 0.0ms | Allocations: 26693)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 12:11:44 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mGuest Create (1.7ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "w c"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 16:11:44.551952"], ["updated_at", "2024-05-07 16:11:44.551952"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+Completed 201 Created in 19ms (Views: 0.4ms | ActiveRecord: 3.5ms | Allocations: 7104)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 12:22:13 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 551.0ms | Allocations: 59326)
+Completed 200 OK in 556ms (Views: 552.7ms | ActiveRecord: 0.0ms | Allocations: 62072)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 12:22:28 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"William Cui", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mGuest Create (1.6ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "William Cui"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 16:22:28.379184"], ["updated_at", "2024-05-07 16:22:28.379184"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+Completed 201 Created in 17ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 7098)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 12:23:32 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"W C", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mGuest Create (0.8ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "W C"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 16:23:32.407225"], ["updated_at", "2024-05-07 16:23:32.407225"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (19.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+Completed 201 Created in 28ms (Views: 0.7ms | ActiveRecord: 20.1ms | Allocations: 1975)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 12:24:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 77.2ms | Allocations: 24052)
+Completed 200 OK in 83ms (Views: 79.2ms | ActiveRecord: 0.0ms | Allocations: 26799)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 12:24:46 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 6256)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 12:26:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 569.0ms | Allocations: 59427)
+Completed 200 OK in 574ms (Views: 571.0ms | ActiveRecord: 0.0ms | Allocations: 62173)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 12:27:05 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 13ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 6253)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 12:29:28 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"William Cui", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mGuest Create (1.1ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "William Cui"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 16:29:28.437981"], ["updated_at", "2024-05-07 16:29:28.437981"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+Completed 201 Created in 17ms (Views: 0.4ms | ActiveRecord: 2.3ms | Allocations: 3030)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 18:26:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 552.0ms | Allocations: 59477)
+Completed 200 OK in 558ms (Views: 554.0ms | ActiveRecord: 0.0ms | Allocations: 62223)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:26:36 -0400
+  
+Zeitwerk::NameError (expected file /Users/willcuh4856/Downloads/mealpal-code-exercise-master 6/app/controllers/api/v1/guests_controller.rb to define constant Api::V1::GuestsController, but didn't):
+  
+zeitwerk (2.6.6) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.6.6) lib/zeitwerk/kernel.rb:31:in `require'
+activesupport (7.0.4) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.4) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.4) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.4) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.4) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.4) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.4) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.4) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:131:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-05-07 18:28:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 70.4ms | Allocations: 24216)
+Completed 200 OK in 76ms (Views: 72.3ms | ActiveRecord: 0.0ms | Allocations: 26963)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:28:47 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"4083346135"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 506)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.4) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.4) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:131:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-05-07 18:30:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 68.5ms | Allocations: 24200)
+Completed 200 OK in 73ms (Views: 70.1ms | ActiveRecord: 0.0ms | Allocations: 26947)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:30:08 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"4083346135"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+  [1m[36mGuest Create (1.7ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "w c"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 22:30:08.492071"], ["updated_at", "2024-05-07 22:30:08.492071"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+Completed 201 Created in 16ms (Views: 0.4ms | ActiveRecord: 3.3ms | Allocations: 7056)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:30:14 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"408334613512"}}
+Completed 400 Bad Request in 9ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1991)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:30:22 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"408334613512"}}
+Completed 400 Bad Request in 7ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1027)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 18:33:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 583.3ms | Allocations: 59566)
+Completed 200 OK in 589ms (Views: 585.2ms | ActiveRecord: 0.0ms | Allocations: 62312)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:33:23 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"4083346135"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+  [1m[36mGuest Create (0.6ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "w c"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 22:33:23.166043"], ["updated_at", "2024-05-07 22:33:23.166043"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+Completed 201 Created in 14ms (Views: 0.3ms | ActiveRecord: 3.5ms | Allocations: 7030)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:33:27 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w ", "phone_number"=>"4083346135"}}
+Completed 400 Bad Request in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1650)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:33:45 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w ", "phone_number"=>"4083346135"}}
+Completed 400 Bad Request in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 765)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 18:36:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 509.5ms | Allocations: 59641)
+Completed 200 OK in 514ms (Views: 511.0ms | ActiveRecord: 0.0ms | Allocations: 62387)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:37:07 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w", "phone_number"=>"4083346135"}}
+Completed 400 Bad Request in 10ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 4772)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:37:12 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"4083346135"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mGuest Create (1.1ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "w c"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 22:37:12.643255"], ["updated_at", "2024-05-07 22:37:12.643255"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+Completed 201 Created in 16ms (Views: 0.5ms | ActiveRecord: 2.2ms | Allocations: 2970)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:37:16 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"40833461"}}
+Completed 400 Bad Request in 9ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 1666)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 18:40:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 68.5ms | Allocations: 24340)
+Completed 200 OK in 74ms (Views: 70.6ms | ActiveRecord: 0.0ms | Allocations: 27087)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:40:58 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"4083346135"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mGuest Create (0.7ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "w c"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 22:40:58.898089"], ["updated_at", "2024-05-07 22:40:58.898089"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+Completed 201 Created in 10ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 7030)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:41:01 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"40833461"}}
+Completed 400 Bad Request in 10ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 1720)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:41:03 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w ", "phone_number"=>"40833461"}}
+Completed 400 Bad Request in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 823)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:41:14 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"lebron james", "phone_number"=>"4083346112"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mGuest Create (1.0ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "lebron james"], ["phone_number", "4083346112"], ["created_at", "2024-05-07 22:41:14.932680"], ["updated_at", "2024-05-07 22:41:14.932680"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:8:in `create'
+Completed 201 Created in 8ms (Views: 0.5ms | ActiveRecord: 2.4ms | Allocations: 1933)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 18:43:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 314.9ms | Allocations: 27754)
+Completed 200 OK in 320ms (Views: 316.8ms | ActiveRecord: 0.0ms | Allocations: 30500)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:43:16 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"a v", "phone_number"=>"408333aaaa"}}
+Completed 400 Bad Request in 10ms (Views: 2.1ms | ActiveRecord: 0.8ms | Allocations: 5784)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:43:22 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"a v", "phone_number"=>"408333aaaaaa"}}
+Completed 400 Bad Request in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 805)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:43:25 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"a v", "phone_number"=>"408333aaaaa"}}
+Completed 400 Bad Request in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 802)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:43:27 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"a v", "phone_number"=>"408333aaaa"}}
+Completed 400 Bad Request in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 802)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:43:32 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"a ", "phone_number"=>"40833334444"}}
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 653)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 18:46:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 69.3ms | Allocations: 24456)
+Completed 200 OK in 74ms (Views: 70.9ms | ActiveRecord: 0.0ms | Allocations: 27203)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:46:07 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w c", "phone_number"=>"4083346135"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+  [1m[36mGuest Create (1.0ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "w c"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 22:46:07.066493"], ["updated_at", "2024-05-07 22:46:07.066493"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+Completed 201 Created in 19ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 7030)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:46:15 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w a@", "phone_number"=>"4083346135"}}
+Completed 400 Bad Request in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 710)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:46:17 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w a", "phone_number"=>"4083346135"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+  [1m[36mGuest Create (0.5ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "w a"], ["phone_number", "4083346135"], ["created_at", "2024-05-07 22:46:17.849111"], ["updated_at", "2024-05-07 22:46:17.849111"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+Completed 201 Created in 9ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 1933)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 18:52:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 376)
+  Rendered layout layouts/application.html.erb (Duration: 71.4ms | Allocations: 24401)
+Completed 200 OK in 92ms (Views: 89.0ms | ActiveRecord: 0.0ms | Allocations: 27148)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 18:52:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 375)
+  Rendered layout layouts/application.html.erb (Duration: 49.6ms | Allocations: 22488)
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.0ms | Allocations: 25235)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/content.4badd4fd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/index.esm.6e77cd8e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/storage.94f96ed3.js"):
+  
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:52:51 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w ", "phone_number"=>"4073333333"}}
+Completed 400 Bad Request in 12ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 4773)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:52:54 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w @", "phone_number"=>"4073333333"}}
+Completed 400 Bad Request in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 661)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:52:56 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w a", "phone_number"=>"4073333333"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+  [1m[36mGuest Create (2.5ms)[0m  [1m[32mINSERT INTO "guests" ("full_name", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["full_name", "w a"], ["phone_number", "4073333333"], ["created_at", "2024-05-07 22:52:56.961645"], ["updated_at", "2024-05-07 22:52:56.961645"]]
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/guests_controller.rb:7:in `create'
+Completed 201 Created in 12ms (Views: 0.7ms | ActiveRecord: 3.7ms | Allocations: 2956)
+
+
+Started POST "/api/v1/guests" for 127.0.0.1 at 2024-05-07 18:53:00 -0400
+Processing by Api::V1::GuestsController#create as JSON
+  Parameters: {"guest"=>{"full_name"=>"w a", "phone_number"=>"4073333"}}
+Completed 400 Bad Request in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 1670)
+
+
